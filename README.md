@@ -22,3 +22,12 @@ $session->clearAll(); // removes all session variables from "MyNamespace" namesp
 
 $session->setNamespace('AnotherNamespace'); // switch namespace
 ```
+
+## Installation
+
+You can install Mendo Session using the dependency management tool [Composer](https://getcomposer.org/).
+Run the *require* command to resolve and download the dependencies:
+
+```
+composer require mendoframework/session
+```
