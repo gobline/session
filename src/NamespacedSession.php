@@ -42,10 +42,6 @@ class NamespacedSession implements NamespacedSessionInterface
      */
     public function has($name)
     {
-        if ((string) $name === '') {
-            throw new \InvalidArgumentException('$name cannot be empty');
-        }
-
         return array_key_exists($name, $_SESSION[$this->namespace]);
     }
 
@@ -99,9 +95,7 @@ class NamespacedSession implements NamespacedSessionInterface
      */
     public function remove($name)
     {
-        if ($this->has($name)) {
-            unset($_SESSION[$this->namespace][$name]);
-        }
+        unset($_SESSION[$this->namespace][$name]);
 
         return $this;
     }
@@ -124,6 +118,10 @@ class NamespacedSession implements NamespacedSessionInterface
         $namespace = (string) $namespace;
         if ($namespace === '') {
             throw new \InvalidArgumentException('$namespace cannot be empty');
+        }
+
+        if (!ctype_alpha($namespace[0]) && $namespace[0] !== '_') {
+            throw new \InvalidArgumentException('$namespace must start with a letter or underscore');
         }
 
         if (!isset($_SESSION[$namespace])) {

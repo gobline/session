@@ -19,17 +19,15 @@ namespace Mendo\Session;
 interface NamespacedSessionInterface
 {
     /**
-     * @param string $name
-     *
-     * @throws \InvalidArgumentException
+     * @param mixed $name
      *
      * @return bool
      */
     public function has($name);
 
     /**
-     * @param string $name
-     * @param string $value
+     * @param mixed $name
+     * @param mixed $value
      *
      * @return NamespacedSession
      */
@@ -47,7 +45,7 @@ interface NamespacedSessionInterface
      *
      * @throws \InvalidArgumentException
      *
-     * @return string
+     * @return mixed
      */
     public function get(...$args);
 
@@ -60,9 +58,7 @@ interface NamespacedSessionInterface
     public function getArrayCopy();
 
     /**
-     * @param string $name
-     *
-     * @throws \InvalidArgumentException
+     * @param mixed $name
      *
      * @return NamespacedSession
      */
