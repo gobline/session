@@ -100,4 +100,10 @@ class SessionTest extends PHPUnit_Framework_TestCase
         $this->assertSame('default', $session1->get('hello', 'default'));
         $this->assertSame('bar', $session1->get('foo', 'default'));
     }
+
+    public function testInvalidSessionNamespace()
+    {
+        $this->setExpectedException('\InvalidArgumentException', 'must start with a letter or underscore');
+        new NamespacedSession('42');
+    }
 }

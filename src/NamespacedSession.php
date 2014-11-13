@@ -121,7 +121,7 @@ class NamespacedSession implements NamespacedSessionInterface
         }
 
         if (!ctype_alpha($namespace[0]) && $namespace[0] !== '_') {
-            throw new \InvalidArgumentException('$namespace must start with a letter or underscore');
+            throw new \InvalidArgumentException('$namespace must start with a letter or underscore (the keys in $_SESSION must be names that could be treated as variables)');
         }
 
         if (!isset($_SESSION[$namespace])) {
