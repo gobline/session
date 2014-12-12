@@ -21,6 +21,8 @@ interface NamespacedSessionInterface
     /**
      * @param mixed $name
      *
+     * @throws \InvalidArgumentException
+     *
      * @return bool
      */
     public function has($name);
@@ -28,6 +30,8 @@ interface NamespacedSessionInterface
     /**
      * @param mixed $name
      * @param mixed $value
+     *
+     * @throws \InvalidArgumentException
      *
      * @return NamespacedSession
      */

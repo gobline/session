@@ -42,6 +42,10 @@ class NamespacedSession implements NamespacedSessionInterface
      */
     public function has($name)
     {
+        if ((string) $name === '') {
+            throw new \InvalidArgumentException('$name cannot be empty');
+        }
+
         return array_key_exists($name, $_SESSION[$this->namespace]);
     }
 
