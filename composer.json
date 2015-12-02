@@ -1,6 +1,6 @@
 {
-    "name": "mendoframework/session",
-    "description": "Mendo Session Component",
+    "name": "gobline/session",
+    "description": "Session component",
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -9,13 +9,13 @@
         }
     ],
     "keywords": [
-        "mf", "mendoframework", "mendo framework",
+        "gobline", 
         "session"
     ],
-    "homepage": "https://github.com/mendoframework",
+    "homepage": "https://github.com/gobline",
     "autoload": {
         "psr-4": {
-            "Mendo\\Session\\": "src/"
+            "Gobline\\Session\\": "src/"
         }
     },
     "require": {

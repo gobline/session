@@ -1,12 +1,12 @@
-# Session Component - Mendo Framework
+# Session component
 
-```Mendo\Session\NamespacedSession``` allows to **segregate all session data into different namespaces**.
+```Gobline\Session\NamespacedSession``` allows to **segregate all session data into different namespaces**.
 A default namespace exists for those who only want one namespace for all their session data.
 
 ## Usage
 
 ```php
-$session = new Mendo\Session\NamespacedSession('MyNamespace');
+$session = new Gobline\Session\NamespacedSession('MyNamespace');
 
 $session->set('foo', 'bar');
 
@@ -25,9 +25,9 @@ $session->setNamespace('AnotherNamespace'); // switch namespace
 
 ## Installation
 
-You can install Mendo Session using the dependency management tool [Composer](https://getcomposer.org/).
+You can install the Session component using the dependency management tool [Composer](https://getcomposer.org/).
 Run the *require* command to resolve and download the dependencies:
 
 ```
-composer require mendoframework/session
+composer require gobline/session
 ```
